@@ -26,7 +26,12 @@ fi
 # Dica: lembre-se de utilizar o operador "-e" junto com a condicional "if"!
 echo "Senha gerada: $senha"
 
-if [ -e /home/arduino/password.txt ]; then
+cd ~
+
+usr=$(pwd)/password.txt
+
+
+if [ -e $usr ]; then
        echo "$senha" >> /home/arduino/password.txt
 else
        touch /home/arduino/password.txt
