@@ -39,3 +39,9 @@ else
        echo "$senha" > /home/arduino/password.txt
 fi
 
+if [ "$1" = "-p" ]; then
+ echo "Senhas Geradas:"
+ cat /home/arduino/password.txt
+elif [ "$1" = "-c" ];then
+ > /home/arduino/password.txt
+fi
